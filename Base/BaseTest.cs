@@ -16,9 +16,11 @@ public class BaseTest
 
         driver.Navigate().GoToUrl("https://practicesoftwaretesting.com");
 
-        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+        wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 
         wait.Until(d => d.FindElement(By.Id("search-query")));
+
+        wait.Until(d => d.FindElements(By.CssSelector("h5[data-test='product-name']")).Count > 0);
     }
 
     [TearDown]

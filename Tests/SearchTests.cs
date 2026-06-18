@@ -8,7 +8,7 @@ public class SearchTests : BaseTest
     [Test]
     public void Search_For_Saw()
     {
-        var homePage = new HomePage(driver);
+        var homePage = new HomePage(driver, wait);
 
         homePage.Search("saw");
 
@@ -16,9 +16,7 @@ public class SearchTests : BaseTest
 
         foreach (var title in titles)
         {
-            Assert.That(
-                title.ToLower(),
-                Does.Contain("saw"));
+            Assert.That(title.ToLower(),Does.Contain("saw"));
         }
     }
 }
