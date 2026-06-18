@@ -1,4 +1,4 @@
-# Webshop Selenium C#
+# Selenium Csharp Demo
 
 A Selenium WebDriver project built with C# and NUnit against the Practice Software Testing application.
 
